@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+:root {
+  --main-bg-color: #232932;
+  --darkest: #1A374D;
+  --dark: #406882;
+  --light: #6998AB;
+  --lightest: #B1D0E0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: var(--main-bg-color);
+  color: #fff;
+}
+
+img, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--lightest);
+  transition: color .1s ease-in;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--light);
+}
+
+iframe {
+  border: 0;
+  border-radius: 16px;
+}
+
+code {
+  font-family: monospace;
+  font-size: 1rem;
+  background: var(--darkest);
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  border-radius: 6px;
+}
+
+#tsparticles canvas{
+  z-index: -1 !important;
+}
+
+/* Scrollbar customization */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fff;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2D333B;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #848484;
+  border-radius: 20px;
+}
