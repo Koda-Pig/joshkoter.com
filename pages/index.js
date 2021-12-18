@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import JoshKoter from '../public/JoshKoter.jpg'
 import homeStyles from '../styles/home.module.css'
 import WeatherApp from '../components/WeatherApp'
 import AudioVisualiser from '../components/AudioVisualiser'
 import WhenPigsFly from '../components/WhenPigsFly'
 import KnightOfCups from '../components/KnightOfCups'
-import Link from 'next/link'
+import Quote from '../components/Quote'
+import Hero from '../components/Hero'
 
 const webYears = new Date().getFullYear() - 2016;
 
@@ -14,14 +16,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Josh Koter  Front-End Developer</title>
+        <title>Josh Koter | Front-End Developer</title>
         <meta name="description" content="Josh Koter's personal website and portfolio." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={homeStyles.hero}>
-        <h1 className={homeStyles.heading}>Josh Koter</h1>
-        <p className={homeStyles.subHeading}>Front-End Developer</p>
-      </div>
+      <Hero />
+      <Quote />
       <div className={homeStyles.blurb}>
         <Image
           src={JoshKoter}
@@ -49,7 +49,7 @@ export default function Home() {
         <p>
           An audio visualiser that responds to microphone input. Allow this site to use your microphone when prompted to see it in action. This project was inspired by Frank over at <Link href='https://www.youtube.com/c/Frankslaboratory' passHref><a>Franks Laboratory</a></Link>.
         </p>
-        <AudioVisualiser w='800' h='600'/>
+        <AudioVisualiser w='800' h='900'/>
       </div>
       <div className={homeStyles.project}>
         <h3>When Pigs Fly Game</h3>
@@ -61,7 +61,7 @@ export default function Home() {
       <div className={homeStyles.project}>
         <h3>Knight of Cups Game</h3>
         <p>
-          Also built using the HTML <code>&lt;canvas&gt;</code> element. To play; use the arrow keys to control CupHead and avoid touching the jellyfish. Credit for all game assets goes to <Link href='https://www.spriters-resource.com/' passHref><a>The Spriters Resource</a></Link>.
+          Also built using the HTML <code>&lt;canvas&gt;</code> element. I used characters from two of my favourite 2D games <Link href='https://store.steampowered.com/app/268910/Cuphead/' passHref><a>Cuphead</a></Link> and <Link href='https://store.steampowered.com/app/367520/Hollow_Knight/' passHref><a>Hollow Knight</a></Link>. To play; use the arrow keys to control Cuphead and avoid touching the jellyfish. Credit for all game assets goes to <Link href='https://www.spriters-resource.com/' passHref><a>The Spriters Resource</a></Link>.
         </p>
         <KnightOfCups w='800' h='600'/>
       </div>

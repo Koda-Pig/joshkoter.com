@@ -11,8 +11,8 @@ export default function Navbar() {
         <Link href='/' passHref>
           <a className={navbarStyles.link}>Home</a>
         </Link>
-        <Link href='/about' passHref>
-          <a className={navbarStyles.link}>About</a>
+        <Link href='/weather-app' passHref>
+          <a className={navbarStyles.link}>Weather App</a>
         </Link>
         <Link href='/contact' passHref>
           <a className={navbarStyles.link}>Contact</a>

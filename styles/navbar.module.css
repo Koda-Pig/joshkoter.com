@@ -16,13 +16,14 @@
 }
 
 .link {
+  display: inline-block;
   margin: 0 1rem;
   padding: 0 1rem;
   transition: transform .2s ease-in;
 }
 
 .link:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 .socialIcons {

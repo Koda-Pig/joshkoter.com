@@ -1,6 +1,7 @@
 import Head from 'next/head'
+import WeatherApp from '../components/WeatherApp'
 
-export default function About() {
+export default function WeatherAppPage() {
   return (
     <>
       <Head>
@@ -8,7 +9,7 @@ export default function About() {
         <meta name="description" content="Josh Koter's personal website and portfolio." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>About</h1>
+      <WeatherApp w='100%' h='700'/>
     </>
   )
 }

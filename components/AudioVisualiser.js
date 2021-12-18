@@ -1,4 +1,4 @@
-export default function WeatherApp({w, h}) {
+export default function AudioVisualiser({w, h}) {
   return (
     <iframe
       width={w}

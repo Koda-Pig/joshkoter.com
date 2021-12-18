@@ -67,6 +67,11 @@ code {
   border-radius: 6px;
 }
 
+*::selection {
+  background: #6998AB;
+}
+
+
 #tsparticles canvas{
   z-index: -1 !important;
 }
