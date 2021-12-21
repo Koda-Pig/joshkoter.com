@@ -1,9 +1,11 @@
 .hero {
+  font-family: 'Cabin Condensed', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 50vh;
+  margin-top: 80px;
 }
 
 .heading {
@@ -17,4 +19,14 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 3rem;
+  font-family: 'Cabin Condensed', sans-serif;
+}
+
+.hero svg {
+  font-weight:bold;
+  max-width:600px;
+}
+
+.hero svg text {
+  font-family: 'Cabin Condensed', sans-serif;
 }

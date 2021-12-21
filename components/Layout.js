@@ -1,7 +1,7 @@
-import Navbar from '../components/NavBar'
+import Navbar from './NavBar'
 import Footer from './Footer'
 import ParticleBackground from './ParticleBackground'
-
+import ScrollToTop from './ScrollToTop'
 
 const Layout = ({children}) => {
   return (
@@ -10,6 +10,7 @@ const Layout = ({children}) => {
     <Navbar />
     {children}
     <Footer />
+    <ScrollToTop />
     </>
   )
 }

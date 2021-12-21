@@ -1,0 +1,34 @@
+.contactSect {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 5rem;
+}
+
+.contactSect h2 {
+  font-size: 3rem;
+}
+
+.link {
+  margin: 0 1rem;
+  padding: 0 1rem;
+  transition: transform .2s ease-in;
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
+
+.socialIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.socialIcons svg {
+  margin: auto;
+  font-size: 2rem;
+}

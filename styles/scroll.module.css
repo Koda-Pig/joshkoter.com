@@ -1,0 +1,26 @@
+.scrollIcon {
+  color: #99FEFF;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+  margin: 0.6rem;
+  cursor: pointer;
+  transition:
+    opacity .5s ease-in-out,
+    transform .2s ease-in-out,
+    color .2s ease-in-out;
+}
+
+.scrollIcon:hover {
+  color: #C2FFF9;
+  transform: scale(1.2);
+}
+
+.visible {
+  opacity: 1;
+}
+
+.invisible {
+  opacity: 0;
+}

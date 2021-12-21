@@ -1,0 +1,59 @@
+.formCard {
+  margin: auto;
+  max-width: 400px;
+  text-align: center;
+  background: #232932;
+  border: 2px solid #1A374D;
+  padding: 22px 40px 40px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5rem;
+}
+
+.formCard h3 {
+  font-size: 2rem;
+}
+
+.formCard input[type=text], .formCard input[type=email], .formCard textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 3px;
+  background: #1A374D;
+  color: #fff;
+}
+
+.formCard input[type=text]:focus, .formCard input[type=email]:focus, .formCard textarea:focus {
+  outline: none;
+}
+
+.formCard textarea:focus {
+  background: url(../public/plzBnice.svg) center center no-repeat, #1A374D;
+}
+.formCard input::placeholder, .formCard textarea::placeholder {
+  color: rgb(168, 168, 168) !important;
+}
+
+.formCard textarea:not(:placeholder-shown) {
+  background: #1A374D;
+}
+
+.formCard input[type=submit] {
+  font-size: 1.2rem;
+  background: #99FEFF;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.4rem 2rem;
+  display: inline-block;
+  border: none;
+  transition: transform .2s ease-in, -webkit-transform .2s ease-in, -moz-transform .2s ease-in;
+}
+
+.formCard input[type=submit]:hover {
+  background: #C2FFF9;
+  transform: scale(1.2);
+}
+
+.formControl {
+  margin: 2rem auto;
+}

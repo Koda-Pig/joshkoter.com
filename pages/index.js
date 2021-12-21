@@ -1,16 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import JoshKoter from '../public/JoshKoter.jpg'
+import JoshKoterPic from '../public/JoshKoter.jpg'
 import homeStyles from '../styles/home.module.css'
 import WeatherApp from '../components/WeatherApp'
-import AudioVisualiser from '../components/AudioVisualiser'
-import WhenPigsFly from '../components/WhenPigsFly'
-import KnightOfCups from '../components/KnightOfCups'
 import Quote from '../components/Quote'
 import Hero from '../components/Hero'
-
-const webYears = new Date().getFullYear() - 2016;
+import Intro from '../components/Intro'
+import Contact from '../components/Contact'
+import Form from '../components/Form'
+import ReactPlayer from 'react-player/lazy'
+import AudioVisualiserWebm from '../public/audio-visualiser.webm'
+import AudioVisualiserMp4 from '../public/audio-visualiser.mp4'
+import WhenPigsFlyWebm from '../public/when-pigs-fly.webm'
+import WhenPigsFlyMp4 from '../public/when-pigs-fly.mp4'
+import KnightOfCupsWebm from '../public/knight-of-cups.webm'
+import KnightOfCupsMp4 from '../public/knight-of-cups.mp4'
 
 export default function Home() {
   return (
@@ -20,50 +25,103 @@ export default function Home() {
         <meta name="description" content="Josh Koter's personal website and portfolio." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero />
-      <Quote />
-      <div className={homeStyles.blurb}>
-        <Image
-          src={JoshKoter}
-          alt="Picture of Josh Koter"
-          className={homeStyles.profilePic}
-        />
-        <div>
-          <p>
-            Hi there! I've been involved in web development since 2016, when I moved from browsing the web to trying to figure out how it works. It's been {webYears} years and I realise that I'll never understand it completely, but that's what keeps me hooked. The web is always changing, always growing, and (for the most part) constantly improving.
-          </p>
-          <p>
-            Below are a few recent projects I've made. They were all built without frameworks and use only vanilla Javascript.
-          </p>
+      
+      <div className={homeStyles.homePage}>
+
+        <Hero id='home' />
+
+        <div className={homeStyles.blurb}>
+          <Image
+            src={JoshKoterPic}
+            alt="Picture of Josh Koter"
+            className={homeStyles.profilePic}
+            width={225}
+            height={225}
+          />
+          <Quote />
         </div>
-      </div>
-      <div className={homeStyles.project}>
-        <h3>Weather App</h3>
-        <p>
-          A simple weather app that makes use of the Geolocation API. To use the 'Get Device Location' button, please allow geolocation when you are prompted.
-        </p>
-        <WeatherApp w='800' h='600'/>
-      </div>
-      <div className={homeStyles.project}>
-        <h3>Audio Visualiser</h3>
-        <p>
-          An audio visualiser that responds to microphone input. Allow this site to use your microphone when prompted to see it in action. This project was inspired by Frank over at <Link href='https://www.youtube.com/c/Frankslaboratory' passHref><a>Franks Laboratory</a></Link>.
-        </p>
-        <AudioVisualiser w='800' h='900'/>
-      </div>
-      <div className={homeStyles.project}>
-        <h3>When Pigs Fly Game</h3>
-        <p>
-          A game built using the HTML <code>&lt;canvas&gt;</code> element. To play; click on the pigs before they disappear off the canvas. Credit for the background image goes to <Link href='https://www.vecteezy.com/free-vector/jungle-background' passHref><a>nightwolfdezines</a></Link>.
-        </p>
-        <WhenPigsFly w='800' h='600'/>
-      </div>
-      <div className={homeStyles.project}>
-        <h3>Knight of Cups Game</h3>
-        <p>
-          Also built using the HTML <code>&lt;canvas&gt;</code> element. I used characters from two of my favourite 2D games <Link href='https://store.steampowered.com/app/268910/Cuphead/' passHref><a>Cuphead</a></Link> and <Link href='https://store.steampowered.com/app/367520/Hollow_Knight/' passHref><a>Hollow Knight</a></Link>. To play; use the arrow keys to control Cuphead and avoid touching the jellyfish. Credit for all game assets goes to <Link href='https://www.spriters-resource.com/' passHref><a>The Spriters Resource</a></Link>.
-        </p>
-        <KnightOfCups w='800' h='600'/>
+
+        <Intro />
+
+        <div className={homeStyles.project}>
+          <h3 id='weather-app'>Weather App</h3>
+          <p>
+            A simple weather app that makes use of the Geolocation API. To use the 'Get Device Location' button, allow location access when you're prompted.
+          </p>
+          <WeatherApp w='500' h='500'/>
+        </div>
+
+        <div className={homeStyles.project}>
+          <h3 id='audio-visualiser'>Audio Visualiser</h3>
+          <p>
+            An audio visualiser that responds to microphone input. <Link href='https://playground.joshkoter.com/audio-visualiser/' passHref><a>Click this link</a></Link>, then allow microphone access and speak into your mic or play some music to see it in action. This project was inspired by Frank over at <Link href='https://www.youtube.com/c/Frankslaboratory' passHref><a>Franks Laboratory</a></Link>.
+          </p>
+          <Link href='https://playground.joshkoter.com/audio-visualiser/' passHref>
+            <a>
+              <ReactPlayer
+                muted={true}
+                playing={true}
+                loop={true}
+                url={[
+                  {src: AudioVisualiserWebm, type: 'video/webm'},
+                  {src: AudioVisualiserMp4, type: 'video/mp4'}
+                ]}
+                width='100%'
+                height='auto'
+              />
+            </a>
+          </Link>
+        </div>
+
+        <div className={homeStyles.project}>
+          <h3 id='when-pigs-fly'>When Pigs Fly Game</h3>
+          <p>
+            A game built using the HTML <code>&lt;canvas&gt;</code> element. I love pigs so I chose this lovely little hog and added some wings to turn it into an animated character. To play; <Link href='https://playground.joshkoter.com/when-pigs-fly/' passHref><a>click this link</a></Link>, then shoot the pigs before they disappear off the canvas. Let me know what your highscore was! Credit for the background image goes to <Link href='https://www.vecteezy.com/free-vector/jungle-background' passHref><a>nightwolfdezines</a></Link>.
+          </p>
+          <Link href='https://playground.joshkoter.com/when-pigs-fly/' passHref>
+            <a>
+              <ReactPlayer
+                muted={true}
+                playing={true}
+                loop={true}
+                url={[
+                  {src: WhenPigsFlyWebm, type: 'video/webm'},
+                  {src: WhenPigsFlyMp4, type: 'video/mp4'}
+                ]}
+                width='100%'
+                height='auto'
+              />
+            </a>
+          </Link>
+        </div>
+
+        <div className={homeStyles.project}>
+          <h3 id='knight-of-cups'>Knight of Cups Game</h3>
+          <p>
+            Another game built with the <code>&lt;canvas&gt;</code> element. I used characters from two of my favourite 2D games <Link href='https://store.steampowered.com/app/268910/Cuphead/' passHref><a>Cuphead</a></Link> and <Link href='https://store.steampowered.com/app/367520/Hollow_Knight/' passHref><a>Hollow Knight</a></Link>. To play; <Link href='https://playground.joshkoter.com/knight-of-cups/' passHref><a>click this link</a></Link>, then use the arrow keys to control Cuphead and avoid touching the jellyfish. Credit for all game assets goes to <Link href='https://www.spriters-resource.com/' passHref><a>The Spriters Resource</a></Link>.
+          </p>
+          <Link href='https://playground.joshkoter.com/knight-of-cups/' passHref>
+            <a>
+              <ReactPlayer
+                muted={true}
+                playing={true}
+                loop={true}
+                url={[
+                  {src: KnightOfCupsWebm, type: 'video/webm'},
+                  {src: KnightOfCupsMp4, type: 'video/mp4'}
+                ]}
+                width='100%'
+                height='auto'
+              />
+            </a>
+          </Link>
+        </div>
+
+        <div className={homeStyles.contact}>
+          <Contact />
+          <Form />
+        </div>
+        
       </div>
     </>
   )
