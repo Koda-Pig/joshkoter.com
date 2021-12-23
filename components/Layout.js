@@ -3,16 +3,14 @@ import Footer from './Footer'
 import ParticleBackground from './ParticleBackground'
 import ScrollToTop from './ScrollToTop'
 
-const Layout = ({children}) => {
+export default function Layout({ children }) {
   return (
     <>
     <ParticleBackground />
     <Navbar />
-    {children}
+      {children}
     <Footer />
     <ScrollToTop />
     </>
   )
 }
-
-export default Layout

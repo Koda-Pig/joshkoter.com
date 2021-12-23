@@ -9,6 +9,8 @@
 
 .homePage {
   padding: 0 1rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .hero {
@@ -49,12 +51,19 @@
 }
 
 .profilePic:hover {
-  filter: grayscale(0%);
+  /* filter: grayscale(0%); */
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+
 .project {
-  margin: auto;
-  max-width: 800px;
+  max-width: 500px;
   padding: 1rem 0 5rem 0;
   display: flex;
   flex-direction: column;
@@ -72,8 +81,4 @@
 
 .project video {
   border-radius: 16px;
-}
-
-.contact {
-
 }

@@ -28,7 +28,7 @@
 }
 
 .formCard textarea:focus {
-  background: url(../public/plzBnice.svg) center center no-repeat, #1A374D;
+  background: url(../public/whypigtho.svg) center center no-repeat, #1A374D;
 }
 .formCard input::placeholder, .formCard textarea::placeholder {
   color: rgb(168, 168, 168) !important;

@@ -1,14 +1,16 @@
 import formStyles from '../styles/form.module.css'
-import Link from 'next/link'
 
-export default function Contact() {
+export default function Form() {
+
   const submitForm = event => {
     event.preventDefault()
   }
+
   return (
   <div className={formStyles.formCard}>
     <h3>Send a message:</h3>
     <form onSubmit={submitForm} name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="contact" value="contact" />
         <div className={formStyles.formControl}>
             <input type="text" name="name" placeholder="name" required autoComplete='name' />
         </div>

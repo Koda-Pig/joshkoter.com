@@ -1,0 +1,34 @@
+@media screen and (min-width: 1920px) {
+  .pig {
+    position: absolute;
+    top: 40%;
+    left: -263px;
+    background: transparent url(../public/Piglogo-anim.png) 0 0 no-repeat;
+    width: 263px;
+    height: 200px;
+    animation:
+      wink 0.5s 1.9s steps(4) 1,
+      sneak 3s steps(100) 1;
+  }
+}
+
+@keyframes wink {
+  100% {
+    background-position: -1052px, 0;
+  }
+}
+
+@keyframes sneak {
+  10% {
+    left: -213px;
+  }
+  70% {
+    left: 10px;
+  }
+  90% {
+    left: 10px;
+  }
+  100% {
+    left: -263px;
+  }
+}

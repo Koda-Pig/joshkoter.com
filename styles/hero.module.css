@@ -20,13 +20,16 @@
   font-weight: 600;
   margin-bottom: 3rem;
   font-family: 'Cabin Condensed', sans-serif;
+  letter-spacing: 0.6rem;
+  text-align: center;
 }
 
 .hero svg {
-  font-weight:bold;
-  max-width:600px;
+  font-weight: bold;
+  max-width: 600px;
 }
 
 .hero svg text {
   font-family: 'Cabin Condensed', sans-serif;
+  letter-spacing: 0.05rem;
 }

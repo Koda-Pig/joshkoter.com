@@ -2,25 +2,26 @@ import Link from 'next/link'
 import navbarStyles from '../styles/navbar.module.css'
 import { useEffect, useState } from 'react'
 
-
 export default function Navbar() {
+
   const [isVisible, setVisible] = useState(false)
+  const [hamburgerOpen, setHamburgerOpen] = useState(false)
+
   const toggleVisbility = () => {
     if (window.pageYOffset > 100) setVisible(true)
     else setVisible(false)
   }
+
+  const toggleHamburger = () =>{
+    setHamburgerOpen(!hamburgerOpen)
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', toggleVisbility)
     return () => {
       window.removeEventListener('scroll', toggleVisbility)
     }
   }, [])
-
-  const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
-  const toggleHamburger = () =>{
-    setHamburgerOpen(!hamburgerOpen)
-  }
 
   return (
     <>
