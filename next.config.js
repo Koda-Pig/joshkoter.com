@@ -1,8 +1,9 @@
+const withImages = require("next-images");
+const withCSS = require('next-css')
 const withVideos = require('next-videos')
 
-module.exports = withVideos()
 
-module.exports = {
+module.exports = withCSS(withImages(withVideos( {
   reactStrictMode: true,
   module: {
     rules: [
@@ -22,4 +23,4 @@ module.exports = {
 
       return config;
   }
-}
+})))
