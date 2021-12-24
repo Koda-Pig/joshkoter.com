@@ -50,17 +50,12 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.profilePic:hover {
-  /* filter: grayscale(0%); */
-}
-
 .projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 5rem;
 }
-
 
 .project {
   max-width: 500px;
