@@ -1,4 +1,4 @@
-import easterEggStyles from '../styles/easter-egg.module.css'
+import easterEggStyles from '../styles/easterEgg.module.css'
 
 export default function EasterEgg() {
   return (

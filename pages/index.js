@@ -50,7 +50,7 @@ export default function Home() {
           <div className={homeStyles.project}>
             <h3 id='weather-app'>Weather App</h3>
             <p>
-              A simple weather app that makes use of the Geolocation API. Type a city name and hit &apos;Enter&apos; to see it in action, or simply use the &apos;Get Device Location&apos; button - you&apos;ll have to allow location access when you&apos;re prompted for this to work.
+              A weather app that uses the Geolocation API. Type a city name and hit &apos;Enter&apos; to see it in action, or simply use the &apos;Get Device Location&apos; button - you&apos;ll have to allow location access when you&apos;re prompted for this to work.
             </p>
             <WeatherApp w='500' h='500'/>
           </div>
