@@ -1,5 +1,13 @@
 module.exports = {
-   reactStrictMode: true
+   reactStrictMode: true,
+   module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
  }
  
  const withVideos = require('next-videos')
