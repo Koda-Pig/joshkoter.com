@@ -1,6 +1,5 @@
 module.exports = {
-   reactStrictMode: true,
-   entry: ["./styles/home.module.css", "./pages/index.js"]
+   reactStrictMode: true
  }
  
  const withVideos = require('next-videos')
