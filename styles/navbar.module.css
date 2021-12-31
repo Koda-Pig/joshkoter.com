@@ -56,14 +56,12 @@
 }
 
 .callToAction {
-  font-size: 1.2rem;
   margin: 0 1rem;
   color: #000;
   background: #99FEFF;
   border-radius: 4px;
   cursor: pointer;
   padding: 0.4rem 2rem;
-  display: inline-block;
   border: none;
   transition: transform .2s ease-in;
 }
