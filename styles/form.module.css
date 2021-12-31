@@ -46,12 +46,12 @@
   padding: 0.4rem 2rem;
   display: inline-block;
   border: none;
-  transition: transform .2s ease-in, -webkit-transform .2s ease-in, -moz-transform .2s ease-in;
+  transition: transform .2s ease-in;
 }
 
 .formCard input[type=submit]:hover {
   background: #C2FFF9;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .formControl {

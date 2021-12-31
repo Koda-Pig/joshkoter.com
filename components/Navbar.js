@@ -34,9 +34,6 @@ export default function Navbar() {
         <Link href='/' passHref>
           <a className={navbarStyles.link}>Home</a>
         </Link>
-        <Link href='#contact' passHref>
-          <a className={navbarStyles.link}>Contact</a>
-        </Link>
         <Link href='#weather-app' passHref>
           <a className={navbarStyles.link}>Weather App</a>
         </Link>
@@ -48,6 +45,9 @@ export default function Navbar() {
         </Link>
         <Link href='#knight-of-cups' passHref>
           <a className={navbarStyles.link}>Knight of Cups</a>
+        </Link>
+        <Link href='#contact' passHref>
+          <a className={navbarStyles.callToAction}>Contact</a>
         </Link>
       </nav>
     </>
