@@ -9,14 +9,20 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.0);
   transition:
-    background-color .2s ease-in-out,
+    background-color .4s ease-in-out,
     opacity .25s ease-in-out,
-    visibility .25s ease-in-out;
+    visibility .25s ease-in-out,
+    top .4s ease-in-out;
 }
 
 .showBg {
   background-color: rgba(35, 41, 50, 0.9);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  top: -50px;
+}
+
+.showBg:hover {
+  top: 0;
 }
 
 .hideBg {
@@ -36,7 +42,7 @@
   transform: scale(1.2);
 }
 
-.hamburger{
+.hamburger {
   width: 2rem;
   height: 2rem;
   display: none;
@@ -79,6 +85,9 @@
   }
   .hamburger {
     display: flex;
+  }
+  .showBg {
+    top: 0;
   }
 }
 
