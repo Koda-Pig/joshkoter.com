@@ -2,8 +2,10 @@ import formStyles from '../styles/form.module.css'
 
 export default function Form() {
 
-  const submitForm = event => {
+  let btnTxt = 'send'
+  const submitForm = (event, btnTxt) => {
     event.preventDefault()
+    btnTxt = 'sending'
   }
 
   return (
@@ -20,7 +22,7 @@ export default function Form() {
         <div className={formStyles.formControl}>
           <textarea name="message" cols="30" rows="2" placeholder='howzit!' required></textarea>
         </div>
-        <input type="submit" value="send" />
+        <input type="submit" value={btnTxt} />
     </form>
   </div>
   )

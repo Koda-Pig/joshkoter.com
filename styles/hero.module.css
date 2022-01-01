@@ -27,6 +27,7 @@
 .hero svg {
   font-weight: bold;
   max-width: 600px;
+  min-height: 4rem;
 }
 
 .hero svg text {
