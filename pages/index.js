@@ -3,13 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ReactPlayer from 'react-player/lazy'
 import homeStyles from '../styles/Home.module.css'
-import WeatherApp from '../components/WeatherApp'
-import Quote from '../components/Quote'
+import EasterEgg from '../components/EasterEgg'
 import Hero from '../components/Hero'
 import Intro from '../components/Intro'
+import Quote from '../components/Quote'
+import WeatherApp from '../components/WeatherApp'
 import Contact from '../components/Contact'
 import Form from '../components/Form'
-import EasterEgg from '../components/EasterEgg'
 import JoshKoterPic from '../public/JoshKoter.jpg'
 import AudioVisualiserMp4 from '../public/audio-visualiser.mp4'
 import WhenPigsFlyMp4 from '../public/when-pigs-fly.mp4'
@@ -33,7 +33,7 @@ export default function Home() {
         <div className={homeStyles.blurb}>
           <Image
             src={JoshKoterPic}
-            alt="Picture of Josh Koter"
+            alt="Headshot of Josh Koter"
             className={homeStyles.profilePic}
             width={225}
             height={225}
