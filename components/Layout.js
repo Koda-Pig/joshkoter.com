@@ -7,9 +7,9 @@ export default function Layout({ children }) {
   return (
     <>
     <ParticleBackground />
-    <Navbar />
-      {children}
-    <Footer />
+      <Navbar />
+        {children}
+      <Footer />
     <ScrollToTop />
     </>
   )
