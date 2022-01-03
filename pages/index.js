@@ -40,6 +40,7 @@ export default function Home() {
             className={homeStyles.profilePic}
             width={225}
             height={225}
+            priority
           />
           <Quote />
         </div>
