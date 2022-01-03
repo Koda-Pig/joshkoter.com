@@ -11,11 +11,8 @@ import Contact from '../components/Contact'
 import Form from '../components/Form'
 import EasterEgg from '../components/EasterEgg'
 import JoshKoterPic from '../public/JoshKoter.jpg'
-import AudioVisualiserWebm from '../public/audio-visualiser.webm'
 import AudioVisualiserMp4 from '../public/audio-visualiser.mp4'
-import WhenPigsFlyWebm from '../public/when-pigs-fly.webm'
 import WhenPigsFlyMp4 from '../public/when-pigs-fly.mp4'
-import KnightOfCupsWebm from '../public/knight-of-cups.webm'
 import KnightOfCupsMp4 from '../public/knight-of-cups.mp4'
 
 export default function Home() {
@@ -67,10 +64,7 @@ export default function Home() {
                   muted={true}
                   playing={true}
                   loop={true}
-                  url={[
-                    {src: AudioVisualiserWebm, type: 'video/webm'},
-                    {src: AudioVisualiserMp4, type: 'video/mp4'}
-                  ]}
+                  url={AudioVisualiserMp4}
                   width='100%'
                   height='auto'
                 />
@@ -89,10 +83,7 @@ export default function Home() {
                   muted={true}
                   playing={true}
                   loop={true}
-                  url={[
-                    {src: WhenPigsFlyWebm, type: 'video/webm'},
-                    {src: WhenPigsFlyMp4, type: 'video/mp4'}
-                  ]}
+                  url={WhenPigsFlyMp4}
                   width='100%'
                   height='auto'
                 />
@@ -111,10 +102,7 @@ export default function Home() {
                   muted={true}
                   playing={true}
                   loop={true}
-                  url={[
-                    {src: KnightOfCupsWebm, type: 'video/webm'},
-                    {src: KnightOfCupsMp4, type: 'video/mp4'}
-                  ]}
+                  url={KnightOfCupsMp4}
                   width='100%'
                   height='auto'
                 />
