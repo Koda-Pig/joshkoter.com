@@ -12,7 +12,7 @@ export default function Navbar() {
     else setVisible(false)
   }
 
-  const toggleHamburger = () =>{
+  const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen)
   }
 

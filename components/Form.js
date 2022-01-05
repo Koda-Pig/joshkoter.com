@@ -1,17 +1,35 @@
 import formStyles from '../styles/form.module.css'
+import { useState } from 'react'
 
 export default function Form() {
 
-  let btnTxt = 'send'
-  const submitForm = (event, btnTxt) => {
+  const [isVisible, setVisible] = useState(false)
+
+  const submitForm = (event) => {
     event.preventDefault()
-    btnTxt = 'sending'
+    let contactForm = document.querySelector("#contactForm")
+    let formData = new FormData(contactForm)
+    fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    }).then(() => {
+      setVisible(true)
+    }).catch((error) => alert(error))
   }
 
   return (
-  <div className={formStyles.formCard}>
+  <div className={`${formStyles.formCard} ${isVisible ? formStyles.submitted : formStyles.notSubmitted}`}>
+
     <h3>Send a message:</h3>
-    <form onSubmit={submitForm} name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form
+      onSubmit={submitForm}
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      id="contactForm"
+    >
       <input type="hidden" name="contact" value="contact" />
         <div className={formStyles.formControl}>
             <input type="text" name="name" placeholder="name" required autoComplete='name' />
@@ -22,8 +40,11 @@ export default function Form() {
         <div className={formStyles.formControl}>
           <textarea name="message" cols="30" rows="2" placeholder='howzit!' required></textarea>
         </div>
-        <input type="submit" value={btnTxt} />
+        <input type="submit" value="send" />
     </form>
+    <p className={formStyles.submitMsg}>
+      Thanks! I&apos;ll be in touch
+    </p>
   </div>
   )
 }

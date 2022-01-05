@@ -57,3 +57,20 @@
 .formControl {
   margin: 2rem auto;
 }
+
+.submitMsg {
+  display: none;
+}
+
+.submitted.formCard {
+  padding: 2rem;
+}
+
+.submitted h3, .submitted form {
+  display: none;
+}
+
+.submitted .submitMsg {
+  display: block;
+  margin-bottom: 0;
+}
