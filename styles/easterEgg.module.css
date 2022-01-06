@@ -7,8 +7,8 @@
     width: 263px;
     height: 200px;
     animation:
-      wink 0.5s 1.9s steps(4) 1,
-      sneak 3s steps(100) 1;
+      wink 0.5s 6.9s steps(4) 1,
+      sneak 3s 5s steps(100) 1;
   }
 }
 
