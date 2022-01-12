@@ -1,4 +1,6 @@
 import formStyles from '../styles/form.module.css'
+import { TiTick } from 'react-icons/ti'
+import { AiFillCheckCircle } from 'react-icons/ai'
 import { useState } from 'react'
 
 export default function Form() {
@@ -21,7 +23,7 @@ export default function Form() {
   return (
   <div className={`${formStyles.formCard} ${isVisible ? formStyles.submitted : formStyles.notSubmitted}`}>
 
-    <h3>Send a message:</h3>
+    <h3>Send a message: </h3>
     <form
       onSubmit={submitForm}
       name="contact"
@@ -43,7 +45,7 @@ export default function Form() {
         <input type="submit" value="send" />
     </form>
     <p className={formStyles.submitMsg}>
-      Thanks! I&apos;ll be in touch
+      <AiFillCheckCircle  className={formStyles.tick}/> Thanks! I&apos;ll be in touch
     </p>
   </div>
   )
