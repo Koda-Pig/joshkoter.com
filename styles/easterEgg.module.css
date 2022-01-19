@@ -1,6 +1,6 @@
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1024px) {
   .pig {
-    position: absolute;
+    position: fixed;
     top: 40%;
     left: -263px;
     background: transparent url(../public/Piglogo-anim.png) 0 0 no-repeat;

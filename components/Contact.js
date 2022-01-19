@@ -8,10 +8,10 @@ export default function Contact() {
       <h2 id='contact'>Get in touch</h2>
       <p>HMU, let&apos;s make something marvellous!</p>
       <div className={contactStyles.socialIcons}>
-        <Link href='mailto:info@joshkoter.com' passHref>
+        <Link href='mailto:josh.koter@gmail.com' passHref>
           <a className={contactStyles.link}><FaRegEnvelope /> Email</a>
         </Link>
-        <Link href='https://www.linkedin.com/in/josh-koter-a3a1b3121/' passHref>
+        <Link href='https://www.linkedin.com/in/josh-koter/' passHref>
           <a className={contactStyles.link}><FaLinkedin /> LinkedIn</a>
         </Link>
         <Link href='https://github.com/Koda-Pig/' passHref>
