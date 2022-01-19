@@ -59,7 +59,7 @@
 
 .project {
   max-width: 500px;
-  padding: 1rem 0 5rem 0;
+  padding: 1rem 0 3rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,6 +68,8 @@
 .project h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  padding-top: 2rem;
+  margin-top: -2rem;
 }
 
 .project p {
