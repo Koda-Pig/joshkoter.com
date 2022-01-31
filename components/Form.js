@@ -1,5 +1,4 @@
-import formStyles from '../styles/form.module.css'
-import { TiTick } from 'react-icons/ti'
+import style from '../styles/form.module.css'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import { useState } from 'react'
 
@@ -21,7 +20,7 @@ export default function Form() {
   }
 
   return (
-  <div className={`${formStyles.formCard} ${isVisible ? formStyles.submitted : formStyles.notSubmitted}`}>
+  <div className={`${style.formCard} ${isVisible ? style.submitted : style.notSubmitted}`}>
 
     <h3>Send a message: </h3>
     <form
@@ -33,19 +32,19 @@ export default function Form() {
       id="contactForm"
     >
       <input type="hidden" name="contact" value="contact" />
-        <div className={formStyles.formControl}>
+        <div className={style.formControl}>
             <input type="text" name="name" placeholder="name" required autoComplete='name' />
         </div>
-        <div className={formStyles.formControl}>
+        <div className={style.formControl}>
             <input type="email" name="email" placeholder="you@domain.com" required autoComplete='email'/>
         </div>
-        <div className={formStyles.formControl}>
+        <div className={style.formControl}>
           <textarea name="message" cols="30" rows="2" placeholder='howzit!' required></textarea>
         </div>
         <input type="submit" value="send" />
     </form>
-    <p className={formStyles.submitMsg}>
-      <AiFillCheckCircle  className={formStyles.tick}/> Thanks! I&apos;ll be in touch
+    <p className={style.submitMsg}>
+      <AiFillCheckCircle  className={style.tick}/> Thanks! I&apos;ll be in touch
     </p>
   </div>
   )

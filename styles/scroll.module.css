@@ -7,9 +7,8 @@
   margin: 0.6rem;
   cursor: pointer;
   transition:
-    opacity .5s ease-in-out,
-    transform .2s ease-in-out,
-    color .2s ease-in-out;
+  opacity .3s ease-in-out,
+  transform .5s cubic-bezier(0.76, 0.45, 0.19, 1.78);
 }
 
 .scrollIcon:hover {
@@ -18,9 +17,11 @@
 }
 
 .visible {
+  transform: translateY(0);
   opacity: 1;
 }
 
 .invisible {
+  transform: translateY(69px);
   opacity: 0;
 }

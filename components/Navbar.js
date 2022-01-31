@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import navbarStyles from '../styles/navbar.module.css'
+import style from '../styles/navbar.module.css'
 import { useEffect, useState } from 'react'
 
 export default function Navbar() {
@@ -25,29 +25,29 @@ export default function Navbar() {
 
   return (
     <>
-      <div className={navbarStyles.hamburger} onClick={toggleHamburger}>
-        <div className={`${navbarStyles.burger} ${navbarStyles.burger1} ${hamburgerOpen ? navbarStyles.open : navbarStyles.closed}`} />
-        <div className={`${navbarStyles.burger} ${navbarStyles.burger2} ${hamburgerOpen ? navbarStyles.open : navbarStyles.closed}`} />
-        <div className={`${navbarStyles.burger} ${navbarStyles.burger3} ${hamburgerOpen ? navbarStyles.open : navbarStyles.closed}`} />
+      <div className={style.hamburger} onClick={toggleHamburger}>
+        <div className={`${style.burger} ${style.burger1} ${hamburgerOpen ? style.open : style.closed}`} />
+        <div className={`${style.burger} ${style.burger2} ${hamburgerOpen ? style.open : style.closed}`} />
+        <div className={`${style.burger} ${style.burger3} ${hamburgerOpen ? style.open : style.closed}`} />
       </div>
-      <nav className={`${navbarStyles.nav} ${isVisible ? navbarStyles.showBg : navbarStyles.hideBg} ${hamburgerOpen ? navbarStyles.open : navbarStyles.closed}`}>
+      <nav className={`${style.nav} ${isVisible ? style.showBg : style.hideBg} ${hamburgerOpen ? style.open : style.closed}`}>
         <Link href='/' passHref>
-          <a className={navbarStyles.link}>Home</a>
+          <a className={style.link} onClick={toggleHamburger}><span className={style.emoji}>🏠</span> Home</a>
         </Link>
         <Link href='#weather-app' passHref>
-          <a className={navbarStyles.link}>Weather App</a>
+          <a className={style.link} onClick={toggleHamburger}><span className={style.emoji}>⛅</span> Weather App</a>
         </Link>
         <Link href='#audio-visualiser' passHref>
-          <a className={navbarStyles.link}>Audio Visualiser</a>
+          <a className={style.link} onClick={toggleHamburger}><span className={style.emoji}>🎵</span> Audio Visualiser</a>
         </Link>
         <Link href='#when-pigs-fly' passHref>
-          <a className={navbarStyles.link}>When Pigs Fly</a>
+          <a className={style.link} onClick={toggleHamburger}><span className={style.emoji}>🐷</span> When Pigs Fly</a>
         </Link>
         <Link href='#knight-of-cups' passHref>
-          <a className={navbarStyles.link}>Knight of Cups</a>
+          <a className={style.link} onClick={toggleHamburger}><span className={style.emoji}>☕</span> Knight of Cups</a>
         </Link>
         <Link href='#contact' passHref>
-          <a className={navbarStyles.callToAction}>Contact</a>
+          <a className={style.callToAction} onClick={toggleHamburger}>Contact</a>
         </Link>
       </nav>
     </>

@@ -74,8 +74,9 @@ code {
 }
 
 
-#tsparticles canvas{
+#tsparticles {
   z-index: -1 !important;
+  position: absolute;
 }
 
 /* Scrollbar customization */
@@ -96,3 +97,6 @@ code {
   background-color: #848484;
   border-radius: 20px;
 }
+
+
+.seenit { display: none !important }

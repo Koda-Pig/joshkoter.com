@@ -6,11 +6,11 @@ import ScrollToTop from './ScrollToTop'
 export default function Layout({ children }) {
   return (
     <>
-    <ParticleBackground />
       <Navbar />
-        {children}
+      {children}
       <Footer />
-    <ScrollToTop />
+      <ScrollToTop />
+      <ParticleBackground />
     </>
   )
 }

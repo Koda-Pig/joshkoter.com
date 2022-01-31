@@ -79,3 +79,31 @@
 .project video {
   border-radius: 16px;
 }
+
+.playIcon {
+  color: #c2fff9cf;
+  font-size: 5rem;
+  transition: transform .25s ease-in-out;
+}
+
+.playIcon:hover {
+  transform: scale(1.1);
+
+}
+
+.video {
+  cursor: pointer;
+  width: 500px !important;
+  height: 500px !important;
+}
+
+.video div {
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 536px) {
+  .video {
+    width: calc(100vw - 2rem) !important;
+    height: calc(100vw - 2rem) !important;
+  }
+}

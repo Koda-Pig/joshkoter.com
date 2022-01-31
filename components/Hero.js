@@ -1,8 +1,8 @@
-import heroStyles from '../styles/hero.module.css'
+import style from '../styles/hero.module.css'
 
 export default function Hero() {
   return (
-    <div className={heroStyles.hero}>
+    <div className={style.hero}>
       <svg viewBox="0 0 100 20">
         <defs>
           <linearGradient id="gradient">
@@ -24,7 +24,7 @@ export default function Hero() {
         <text textAnchor="middle" x="50" y="15" fontSize="20" fill="#c2fff9" fillOpacity="0.7">Josh Koter</text>
         <text textAnchor="middle" x="50" y="15" fontSize="20" fill="url(#wave)" fillOpacity="1">Josh Koter</text>
       </svg>
-      <p className={heroStyles.subHeading}>Front-End Developer</p>
+      <p className={style.subHeading}>Front-End Developer</p>
     </div>
   )
 }
