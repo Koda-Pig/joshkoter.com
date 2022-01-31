@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <Head>
         <title>Josh Koter | Front-End Developer</title>
-        <meta name="description" content="Josh Koter's personal website and portfolio." />
+        <meta name="description" content="Personal website and portfolio." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
