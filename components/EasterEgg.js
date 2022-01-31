@@ -5,8 +5,6 @@ import Link from 'next/link'
 export default function EasterEgg() {
 
   useEffect(() => {
-
-    console.log(!localStorage.getItem('seen-a-pig'))
     if (localStorage.getItem('seen-a-pig')) { 
       (document.querySelector('#easteregg')).classList.add("seenit")
     } else {
