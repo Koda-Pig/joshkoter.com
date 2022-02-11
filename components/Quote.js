@@ -23,9 +23,7 @@ export default function Quote() {
   return (
     <div
       className={style.quote}
-      onClick={
-        () => setQuote(quotes[(Math.floor(Math.random() * quotes.length))])
-      }
+      onClick={ () => setQuote(quotes[(Math.floor(Math.random() * quotes.length))]) }
     >
       <p>
         <em>“{quote.content}”</em><br/>
