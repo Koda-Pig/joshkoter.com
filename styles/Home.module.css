@@ -68,8 +68,8 @@
 .project h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  padding-top: 2rem;
-  margin-top: -2rem;
+  /* account for height of nav when scroll to heading */
+  scroll-margin: 2.4rem 0 0 0;
 }
 
 .project p {
