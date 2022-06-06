@@ -3,7 +3,6 @@ import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 import style from '../styles/scroll.module.css'
 
 export default function ScrollToTop() {
-
   const [isVisible, setVisible] = useState(false)
 
   const toggleVisbility = () => {
@@ -14,7 +13,7 @@ export default function ScrollToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: 'smooth',
     })
   }
 
@@ -24,12 +23,14 @@ export default function ScrollToTop() {
       window.removeEventListener('scroll', toggleVisbility)
     }
   }, [])
-  
+
   return (
     <>
       <BsFillArrowUpCircleFill
         onClick={scrollToTop}
-        className={ `${style.scrollIcon} ${isVisible ? style.visible : style.invisible}` }
+        className={`${style.scrollIcon} ${
+          isVisible ? style.visible : style.invisible
+        }`}
       />
     </>
   )

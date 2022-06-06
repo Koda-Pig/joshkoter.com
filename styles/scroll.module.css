@@ -1,18 +1,17 @@
 .scrollIcon {
-  color: #99FEFF;
+  color: #99feff;
   position: fixed;
   bottom: 0;
   right: 0;
   font-size: 2rem;
   margin: 0.6rem;
   cursor: pointer;
-  transition:
-  opacity .3s ease-in-out,
-  transform .5s cubic-bezier(0.76, 0.45, 0.19, 1.78);
+  transition: opacity 0.3s ease-in-out,
+    transform 0.5s cubic-bezier(0.76, 0.45, 0.19, 1.78);
 }
 
 .scrollIcon:hover {
-  color: #C2FFF9;
+  color: #c2fff9;
   transform: scale(1.2);
 }
 

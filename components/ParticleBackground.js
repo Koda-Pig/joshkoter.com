@@ -1,4 +1,4 @@
-import Particles from "react-tsparticles"
+import Particles from 'react-tsparticles'
 
 export default function ParticleBackground() {
   return (
@@ -7,7 +7,7 @@ export default function ParticleBackground() {
       options={{
         background: {
           color: {
-            value: "#111",
+            value: '#111',
           },
         },
         fpsLimit: 60,
@@ -39,10 +39,10 @@ export default function ParticleBackground() {
         },
         particles: {
           color: {
-            value: "#406882",
+            value: '#406882',
           },
           links: {
-            color: "#1A374D",
+            color: '#1A374D',
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -52,9 +52,9 @@ export default function ParticleBackground() {
             enable: true,
           },
           move: {
-            direction: "none",
+            direction: 'none',
             enable: true,
-            outMode: "bounce",
+            outMode: 'bounce',
             random: false,
             speed: 0.1,
             straight: false,
@@ -70,7 +70,7 @@ export default function ParticleBackground() {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: 'circle',
           },
           size: {
             random: true,
@@ -80,5 +80,5 @@ export default function ParticleBackground() {
         detectRetina: true,
       }}
     />
-  );
-};
+  )
+}

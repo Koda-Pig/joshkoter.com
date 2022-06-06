@@ -46,7 +46,7 @@
 .profilePic {
   border-radius: 100%;
   filter: grayscale();
-  transition: filter .2s ease-in;
+  transition: filter 0.2s ease-in;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -83,12 +83,11 @@
 .playIcon {
   color: #c2fff9cf;
   font-size: 5rem;
-  transition: transform .25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 
 .playIcon:hover {
   transform: scale(1.1);
-
 }
 
 .video {
