@@ -20,9 +20,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Josh Koter | Front-End Developer</title>
         <meta name="description" content="Personal website and portfolio." />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#2196f3" />
+        <title>Josh Koter | Front-End Developer</title>
+        <link rel="icon" href="favicon.ico" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="apple-touch-icon" href="icon-192x192.png" />
       </Head>
 
       <EasterEgg />
