@@ -26,6 +26,12 @@ export default function Home() {
         <link rel="icon" href="favicon.ico" />
         <link rel="manifest" href="manifest.json" />
         <link rel="apple-touch-icon" href="icon-192x192.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Nunito:wght@200;300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <EasterEgg />
