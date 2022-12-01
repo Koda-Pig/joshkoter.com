@@ -64,14 +64,15 @@
   &Control {
     margin: 2rem auto;
   }
-  .submitMsg {
-    display: none;
-  }
+}
+
+.submitMsg {
+  display: none;
 }
 
 svg.tick {
-  color: rgb(29, 255, 29);
-  font-size: 2.2rem;
+  color: #1dff1d;
   display: inline;
+  font-size: 2.2rem;
   margin: -0.6rem 0;
 }
