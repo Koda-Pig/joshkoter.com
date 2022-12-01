@@ -1,4 +1,4 @@
-import style from '../styles/form.module.css'
+import style from '../styles/form.module.scss'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import { useState } from 'react'
 
@@ -12,7 +12,7 @@ export default function Form() {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
+      body: new URLSearchParams(formData).toString()
     })
       .then(() => {
         setVisible(true)

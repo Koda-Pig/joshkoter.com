@@ -1,0 +1,39 @@
+.contactSect {
+  gap: 2rem;
+  display: flex;
+  text-align: center;
+  padding-bottom: 5rem;
+  flex-direction: column;
+  h2 {
+    font-size: 3rem;
+    padding-top: 2rem;
+    margin-top: -2rem;
+  }
+}
+
+.link {
+  margin: 0 1rem;
+  padding: 0 1rem;
+  transition: transform 0.2s ease-in;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.socialIcons {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  text-align: center;
+  justify-content: center;
+  svg {
+    margin: auto;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  .link {
+    margin: 0;
+  }
+}

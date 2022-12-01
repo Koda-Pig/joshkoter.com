@@ -1,4 +1,4 @@
-import style from '../styles/easterEgg.module.css'
+import style from '../styles/easterEgg.module.scss'
 import { useEffect } from 'react'
 import Link from 'next/link'
 

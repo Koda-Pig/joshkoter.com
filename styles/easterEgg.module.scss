@@ -1,13 +1,13 @@
 @media screen and (min-width: 1024px) {
   .pig {
-    cursor: pointer;
-    position: fixed;
     top: 40%;
     left: -263px;
-    background: transparent url(../public/Piglogo-anim.png) 0 0 no-repeat;
     width: 263px;
     height: 200px;
+    cursor: pointer;
+    position: fixed;
     animation: wink 0.5s 6.9s steps(4) 1, sneak 3s 5s steps(100) 1;
+    background: transparent url(../public/Piglogo-anim.png) 0 0 no-repeat;
   }
 }
 

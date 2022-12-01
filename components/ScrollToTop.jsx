@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
-import style from '../styles/scroll.module.css'
+import style from '../styles/scroll.module.scss'
 
 export default function ScrollToTop() {
   const [isVisible, setVisible] = useState(false)
@@ -13,7 +13,7 @@ export default function ScrollToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: 'smooth'
     })
   }
 

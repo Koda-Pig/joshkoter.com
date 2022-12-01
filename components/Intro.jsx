@@ -1,4 +1,4 @@
-import style from '../styles/intro.module.css'
+import style from '../styles/intro.module.scss'
 
 export default function Intro() {
   const webYears = new Date().getFullYear() - 2016

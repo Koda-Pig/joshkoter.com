@@ -1,4 +1,4 @@
-import style from '../styles/contact.module.css'
+import style from '../styles/contact.module.scss'
 import Link from 'next/link'
 import { FaLinkedin, FaGithubSquare, FaRegEnvelope } from 'react-icons/fa'
 

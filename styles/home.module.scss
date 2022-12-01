@@ -21,12 +21,6 @@
   height: 50vh;
 }
 
-.heading {
-  color: #fff;
-  font-size: 6rem;
-  font-weight: 600;
-}
-
 .subHeading {
   color: #eee;
   font-size: 2rem;
@@ -45,7 +39,7 @@
 
 .profilePic {
   border-radius: 100%;
-  filter: grayscale();
+  filter: grayscale(100%);
   transition: filter 0.2s ease-in;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -63,41 +57,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.project h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  /* account for height of nav when scroll to heading */
-  scroll-margin: 2.4rem 0 0 0;
-}
-
-.project p {
-  margin-bottom: 2rem;
-}
-
-.project video {
-  border-radius: 16px;
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* account for height of nav when scroll to heading */
+    scroll-margin: 2.4rem 0 0 0;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  video {
+    border-radius: 16px;
+  }
 }
 
 .playIcon {
   color: #c2fff9cf;
   font-size: 5rem;
   transition: transform 0.25s ease-in-out;
-}
-
-.playIcon:hover {
-  transform: scale(1.1);
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .video {
   cursor: pointer;
   width: 500px !important;
   height: 500px !important;
-}
-
-.video div {
-  border-radius: 16px;
+  div {
+    border-radius: 16px;
+  }
 }
 
 @media screen and (max-width: 536px) {
