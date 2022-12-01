@@ -22,7 +22,7 @@
       background: #1a374d;
       border-bottom: 1px solid #ccc;
       &:focus {
-        outline: none;
+        outline: 1px solid #fff3;
       }
     }
     textarea:focus {
@@ -43,7 +43,7 @@
       padding: 0.4rem 2rem;
       display: inline-block;
       border: none;
-      transition: transform 0.2s ease-in;
+      transition: transform 0.15s ease-in;
       &:hover {
         background: #c2fff9;
         transform: scale(1.1);
