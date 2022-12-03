@@ -22,60 +22,45 @@ export default function Navbar() {
     }
   }, [])
 
+  const menuList = [
+    { link: '/', text: 'Home' },
+    { link: '#weather-app', text: 'Weather App' },
+    { link: '#audio-visualiser', text: 'Audio Visualiser' },
+    { link: '#when-pigs-fly', text: 'When Pigs Fly' },
+    { link: '#knight-of-cups', text: 'Knight of Cups' },
+    { link: '#contact', text: 'Contact' }
+  ]
+  const menuItems = menuList.map((item, index) => {
+    return (
+      <Link key={index} href={item.link} passHref>
+        <a className={style.link} onClick={toggleHamburger}>
+          {item.text}
+        </a>
+      </Link>
+    )
+  })
+
   return (
     <>
-      <div className={style.hamburger} onClick={toggleHamburger}>
-        <div
-          className={`${style.burger} ${style.burger1} ${
-            hamburgerOpen ? style.open : style.closed
-          }`}
-        />
-        <div
-          className={`${style.burger} ${style.burger2} ${
-            hamburgerOpen ? style.open : style.closed
-          }`}
-        />
-        <div
-          className={`${style.burger} ${style.burger3} ${
-            hamburgerOpen ? style.open : style.closed
-          }`}
-        />
-      </div>
+      <button
+        className={`${style.hamburger} 
+        `}
+        onClick={toggleHamburger}
+        aria-controls="navigation"
+        aria-expanded={hamburgerOpen ? true : false}
+      >
+        <svg fill="#fff" viewBox="0 0 100 100">
+          <rect y="15" className={style.top}></rect>
+          <rect y="45" className={style.mid}></rect>
+          <rect y="75" className={style.bot}></rect>
+        </svg>
+      </button>
       <nav
         className={`${style.nav} ${isVisible ? style.showBg : style.hideBg} ${
           hamburgerOpen ? style.open : style.closed
         }`}
       >
-        <Link href="/" passHref>
-          <a className={style.link} onClick={toggleHamburger}>
-            <span className={style.emoji}>🏠</span> Home
-          </a>
-        </Link>
-        <Link href="#weather-app" passHref>
-          <a className={style.link} onClick={toggleHamburger}>
-            <span className={style.emoji}>⛅</span> Weather App
-          </a>
-        </Link>
-        <Link href="#audio-visualiser" passHref>
-          <a className={style.link} onClick={toggleHamburger}>
-            <span className={style.emoji}>🎵</span> Audio Visualiser
-          </a>
-        </Link>
-        <Link href="#when-pigs-fly" passHref>
-          <a className={style.link} onClick={toggleHamburger}>
-            <span className={style.emoji}>🐷</span> When Pigs Fly
-          </a>
-        </Link>
-        <Link href="#knight-of-cups" passHref>
-          <a className={style.link} onClick={toggleHamburger}>
-            <span className={style.emoji}>☕</span> Knight of Cups
-          </a>
-        </Link>
-        <Link href="#contact" passHref>
-          <a className={style.callToAction} onClick={toggleHamburger}>
-            Contact
-          </a>
-        </Link>
+        {menuItems}
       </nav>
     </>
   )
