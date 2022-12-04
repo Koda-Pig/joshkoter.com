@@ -48,49 +48,25 @@
   background: none;
   flex-flow: column nowrap;
   justify-content: space-around;
-  rect {
-    x: 0px;
-    rx: 5px;
-    width: 100px;
-    height: 10px;
-    transform-origin: center;
-    transition: y 0.3s ease 0.3s, rotate 0.3s ease, opacity 0s ease 0.3s;
+  transition: rotate 0.3s ease;
+  &:focus-visible {
+    outline: 0;
+  }
+  path {
+    fill: none;
+    stroke: white;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 60 31 60 300;
+    transition: stroke-dasharray 0.3s ease, stroke-dashoffset 0.3s ease;
   }
   &[aria-expanded='true'] {
-    rect {
-      transition: y 0.3s ease, rotate 0.3s ease 0.3s, opacity 0s ease 0.3s;
+    rotate: 45deg;
+    path {
+      stroke-dashoffset: -90;
+      stroke-dasharray: 60 105 60 300;
     }
-    .top,
-    .bot {
-      y: 45;
-    }
-    .top {
-      rotate: 45deg;
-    }
-    .mid {
-      opacity: 0;
-      rotate: 180deg;
-    }
-    .bot {
-      rotate: -45deg;
-    }
-  }
-}
-
-.callToAction {
-  border: none;
-  color: #000;
-  margin: 0 1rem;
-  cursor: pointer;
-  border-radius: 3rem;
-  padding: 0.4rem 2rem;
-  background: #99feff;
-  transition: border-radius 0.2s ease-in;
-  &:hover {
-    color: #000;
-    background: #c2fff9;
-    // transform: scale(1.1);
-    border-radius: 41% 59% 41% 59% / 43% 45% 55% 57%;
   }
 }
 
@@ -103,14 +79,11 @@
     font-size: 1.2rem;
     flex-direction: column;
     padding: 3rem 0 1rem 0;
+    transition: transform 0.25s ease-out;
     background-color: rgba(35, 41, 50, 0.98);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    transition: transform 0.35s cubic-bezier(1, -0.23, 0.54, 0.61);
     .link {
       margin-bottom: 1.5rem;
-    }
-    .callToAction {
-      margin-bottom: 1rem;
     }
     &.closed {
       flex-direction: column;

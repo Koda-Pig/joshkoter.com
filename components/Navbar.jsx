@@ -43,16 +43,13 @@ export default function Navbar() {
   return (
     <>
       <button
-        className={`${style.hamburger} 
-        `}
+        className={style.hamburger}
         onClick={toggleHamburger}
         aria-controls="navigation"
         aria-expanded={hamburgerOpen ? true : false}
       >
-        <svg fill="#fff" viewBox="0 0 100 100">
-          <rect y="15" className={style.top}></rect>
-          <rect y="45" className={style.mid}></rect>
-          <rect y="75" className={style.bot}></rect>
+        <svg viewBox="-10 -10 120 120">
+          <path d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70" />
         </svg>
       </button>
       <nav
