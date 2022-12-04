@@ -36,12 +36,12 @@
 }
 
 .hamburger {
-  top: 6px;
+  top: -10px;
+  right: 0;
   border: 0;
-  right: 9px;
   z-index: 3;
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   display: none;
   cursor: pointer;
   position: fixed;
