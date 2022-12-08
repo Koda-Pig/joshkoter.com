@@ -8,8 +8,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.35s ease-in-out, transform 0.35s ease-in-out,
-    top 0.35s ease-in-out;
+  transition: background-color 0.35s, transform 0.35s, top 0.35s;
 }
 
 .showBg {
@@ -29,7 +28,7 @@
   margin: 0 1rem;
   padding: 0 1rem;
   display: inline-block;
-  transition: transform 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: transform 0.15s, color 0.15s;
   &:hover {
     transform: scale(1.1);
   }
@@ -50,13 +49,13 @@
   justify-content: space-around;
   &::before {
     content: '';
-    width: 55px;
-    height: 55px;
-    z-index: -1;
     right: 4px;
+    width: 55px;
+    z-index: -1;
+    height: 55px;
+    rotate: 45deg;
     position: absolute;
     background: #0000;
-    rotate: 45deg;
     border-radius: 50%;
     backdrop-filter: blur(8px);
     box-shadow: 0px 0px 5px 5px rgba(34, 34, 34, 0.6);
@@ -65,7 +64,7 @@
     outline: 0;
   }
   svg {
-    transition: rotate 0.3s ease, transform 0.3s ease;
+    transition: rotate 0.8s, transform 0.8s;
   }
   path {
     fill: none;
@@ -74,7 +73,7 @@
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-dasharray: 60 31 60 300;
-    transition: stroke-dasharray 0.3s ease, stroke-dashoffset 0.3s ease;
+    transition: stroke-dasharray 0.8s, stroke-dashoffset 0.8s;
   }
   &[aria-expanded='true'] {
     svg {
@@ -98,14 +97,13 @@
     flex-direction: column;
     padding: 3rem 0 1rem 0;
     transition: transform 0.25s ease-out;
-    background-color: rgba(35, 41, 50, 0.98);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background-color: rgba(35, 41, 50, 0.98);
     .link {
       margin-bottom: 1.5rem;
     }
     &.closed {
       flex-direction: column;
-      transition-delay: 0.1s;
       transform: translateX(100vw);
       a {
         transform: translateX(100vw);
