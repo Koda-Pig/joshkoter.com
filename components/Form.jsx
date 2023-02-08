@@ -3,22 +3,21 @@ import { AiFillCheckCircle } from 'react-icons/ai'
 import { useState } from 'react'
 
 export default function Form() {
-  const [isVisible, setVisible] = useState(false)
-
-  const submitForm = (event) => {
-    event.preventDefault()
-    let contactForm = document.querySelector('#contactForm')
-    let formData = new FormData(contactForm)
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
-    })
-      .then(() => {
-        setVisible(true)
+  const [isVisible, setVisible] = useState(false),
+    submitForm = (event) => {
+      event.preventDefault()
+      let contactForm = document.querySelector('#contactForm'),
+        formData = new FormData(contactForm)
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
       })
-      .catch((error) => alert(error))
-  }
+        .then(() => {
+          setVisible(true)
+        })
+        .catch((error) => alert(error))
+    }
 
   return (
     <div

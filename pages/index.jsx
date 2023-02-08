@@ -32,8 +32,7 @@ export default function Home() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
-        {/* there's warning that the font will only load
-            for a single page. There is only a single page */}
+        {/* there's warning that the font will only load for a single page. There is only a single page, so this is a non-issue */}
         {/* eslint-disable-next-line */}
         <link
           href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Nunito:wght@200;300;400;500;600&display=swap"
