@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 export default function Form() {
   const [isVisible, setVisible] = useState(false),
-    submitForm = (event) => {
+    submitForm = event => {
       event.preventDefault()
       let contactForm = document.querySelector('#contactForm'),
         formData = new FormData(contactForm)
@@ -16,7 +16,7 @@ export default function Form() {
         .then(() => {
           setVisible(true)
         })
-        .catch((error) => alert(error))
+        .catch(error => alert(error))
     }
 
   return (
@@ -30,8 +30,7 @@ export default function Form() {
         onSubmit={submitForm}
         name="contact"
         method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
+        netlify
         id="contactForm"
       >
         <input type="hidden" name="contact" value="contact" />
