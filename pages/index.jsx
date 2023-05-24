@@ -61,7 +61,7 @@ export default function Home() {
 
         <div className={style.projects}>
           <div className={style.project}>
-            <Link href="https://playground.joshkoter.com/weather-app/" passHref>
+            <Link href="https://weatherapp.joshkoter.com/" passHref>
               <a className={style.link}>
                 <h3 id="weather-app">Weather App</h3>
               </a>
