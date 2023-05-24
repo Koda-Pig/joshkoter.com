@@ -3,7 +3,7 @@ export default function WeatherApp({ w, h }) {
     <iframe
       width={w}
       height={h}
-      src="https://playground.joshkoter.com/weather-app/"
+      src="https://weatherapp.joshkoter.com/"
       title="Simple weather app"
       allow="geolocation"
     ></iframe>
