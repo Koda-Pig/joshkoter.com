@@ -8,7 +8,9 @@
   color: #99feff;
   transition: opacity 0.3s ease-in-out,
     transform 0.5s cubic-bezier(0.76, 0.45, 0.19, 1.78);
-  &:hover {
+
+  &:hover,
+  &:focus-visible {
     color: #c2fff9;
     transform: scale(1.1);
   }

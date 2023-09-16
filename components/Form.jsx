@@ -11,7 +11,7 @@ export default function Form() {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
+        body: new URLSearchParams(formData).toString(),
       })
         .then(() => {
           setVisible(true)
@@ -30,7 +30,7 @@ export default function Form() {
         onSubmit={submitForm}
         name="contact"
         method="POST"
-        netlify
+        netlify="true"
         id="contactForm"
       >
         <input type="hidden" name="contact" value="contact" />

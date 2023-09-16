@@ -29,7 +29,9 @@
   padding: 0 1rem;
   display: inline-block;
   transition: transform 0.15s, color 0.15s;
-  &:hover {
+
+  &:hover,
+  &:focus-visible {
     transform: scale(1.1);
   }
 }
@@ -47,25 +49,29 @@
   background: none;
   flex-flow: column nowrap;
   justify-content: space-around;
+
   &::before {
     content: '';
     right: 4px;
     width: 55px;
     z-index: -1;
     height: 55px;
-    rotate: 45deg;
     position: absolute;
-    background: #0000;
     border-radius: 50%;
+    background: #0000;
+    transform: rotate(45deg);
     backdrop-filter: blur(8px);
     box-shadow: 0px 0px 5px 5px rgba(34, 34, 34, 0.6);
   }
+
   &:focus-visible {
     outline: transparent;
   }
+
   svg {
     transition: rotate 0.8s, transform 0.8s;
   }
+
   path {
     fill: none;
     stroke: white;
@@ -75,11 +81,12 @@
     stroke-dasharray: 60 31 60 300;
     transition: stroke-dasharray 0.8s, stroke-dashoffset 0.8s;
   }
+
   &[aria-expanded='true'] {
     svg {
-      rotate: 45deg;
-      transform: translate(0px, -5px);
+      transform: translate(0px, -5px) rotate(45deg);
     }
+
     path {
       stroke-dashoffset: -90;
       stroke-dasharray: 60 105 60 300;
@@ -99,22 +106,28 @@
     transition: transform 0.25s ease-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     background-color: rgba(35, 41, 50, 0.98);
+
     .link {
       margin-bottom: 1.5rem;
     }
+
     &.closed {
       flex-direction: column;
       transform: translateX(100vw);
+
       a {
         transform: translateX(100vw);
       }
     }
+
     &.open {
       transform: translateX(0);
+
       a {
         transform: translateX(0);
       }
     }
+
     a {
       transition: transform 0.15s ease-in;
       @for $i from 1 through 6 {
@@ -124,9 +137,11 @@
       }
     }
   }
+
   .hamburger {
     display: flex;
   }
+
   .showBg {
     top: 0;
   }

@@ -42,7 +42,7 @@ export default function Home() {
 
       <EasterEgg />
 
-      <div className={style.homePage}>
+      <main className={style.homePage} id="main-content" tabIndex="0">
         <Hero id="home" />
 
         <div className={style.blurb}>
@@ -219,7 +219,7 @@ export default function Home() {
           <Contact />
           <Form />
         </div>
-      </div>
+      </main>
     </>
   )
 }

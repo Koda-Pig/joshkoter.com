@@ -6,12 +6,10 @@ export default function Navbar() {
   const [isVisible, setVisible] = useState(false),
     [hamburgerOpen, setHamburgerOpen] = useState(false),
     toggleVisbility = () => {
-      if (window.pageYOffset > 100) setVisible(true)
+      if (window.scrollY > 100) setVisible(true)
       else setVisible(false)
     },
-    toggleHamburger = () => {
-      setHamburgerOpen(!hamburgerOpen)
-    }
+    toggleHamburger = () => setHamburgerOpen(!hamburgerOpen)
 
   useEffect(() => {
     window.addEventListener('scroll', toggleVisbility)
@@ -26,7 +24,7 @@ export default function Navbar() {
       { link: '#audio-visualiser', text: 'Audio Visualiser' },
       { link: '#when-pigs-fly', text: 'When Pigs Fly' },
       { link: '#knight-of-cups', text: 'Knight of Cups' },
-      { link: '#contact', text: 'Contact' }
+      { link: '#contact', text: 'Contact' },
     ],
     menuItems = menuList.map((item, index) => {
       return (
@@ -39,7 +37,7 @@ export default function Navbar() {
     })
 
   return (
-    <>
+    <header>
       <button
         className={style.hamburger}
         onClick={toggleHamburger}
@@ -57,6 +55,6 @@ export default function Navbar() {
       >
         {menuItems}
       </nav>
-    </>
+    </header>
   )
 }

@@ -1,0 +1,14 @@
+.skipToContent {
+  $offset: 8px;
+  top: $offset;
+  left: $offset;
+  position: fixed;
+  transition-duration: 0.2s;
+  transition-property: transform;
+  transform: translateX(calc(-100% - $offset));
+
+  &:focus,
+  &:focus-visible {
+    transform: translateX(0);
+  }
+}
