@@ -32,6 +32,7 @@ export default function Home() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
+        {/* eslint-disable-next-line */}
         <link
           href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Nunito:wght@200;300;400;500;600&display=swap"
           rel="stylesheet"
