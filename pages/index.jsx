@@ -15,7 +15,6 @@ import JoshKoterPic from '../public/JoshKoter.jpg'
 import WhenPigsFlyMp4 from '../public/when-pigs-fly.mp4'
 import KnightOfCupsMp4 from '../public/knight-of-cups.mp4'
 import AudioVisualiserMp4 from '../public/audio-visualiser.mp4'
-import GoogleTagManager from '../components/GoogleTagManager'
 
 export default function Home() {
   return (
@@ -37,7 +36,6 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Nunito:wght@200;300;400;500;600&display=swap"
           rel="stylesheet"
         />
-        <GoogleTagManager gtagId="G-4ML6BZSHFC" />
       </Head>
 
       <EasterEgg />
