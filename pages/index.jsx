@@ -15,21 +15,12 @@ import JoshKoterPic from '../public/JoshKoter.jpg'
 import WhenPigsFlyMp4 from '../public/when-pigs-fly.mp4'
 import KnightOfCupsMp4 from '../public/knight-of-cups.mp4'
 import AudioVisualiserMp4 from '../public/audio-visualiser.mp4'
+import GoogleTagManager from '../components/GoogleTagManager'
 
 export default function Home() {
   return (
     <>
       <Head>
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-4ML6BZSHFC"
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-4ML6BZSHFC');
-        </script>
         <meta name="description" content="Personal website and portfolio." />
         <meta name="theme-color" content="#2196f3" />
         <title>Josh Koter | Front-End Developer</title>
@@ -42,12 +33,11 @@ export default function Home() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
-        {/* there's warning that the font will only load for a single page. There is only a single page, so this is a non-issue */}
-        {/* eslint-disable-next-line */}
         <link
           href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Nunito:wght@200;300;400;500;600&display=swap"
           rel="stylesheet"
         />
+        <GoogleTagManager gtagId="G-4ML6BZSHFC" />
       </Head>
 
       <EasterEgg />
