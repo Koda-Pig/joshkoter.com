@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
 import ReactPlayer from 'react-player/lazy'
 import { BsFillPlayCircleFill } from 'react-icons/bs'
@@ -15,6 +14,7 @@ import JoshKoterPic from '../public/JoshKoter.jpg'
 import WhenPigsFlyMp4 from '../public/when-pigs-fly.mp4'
 import KnightOfCupsMp4 from '../public/knight-of-cups.mp4'
 import AudioVisualiserMp4 from '../public/audio-visualiser.mp4'
+import StickHeroTributeMp4 from '../public/stick-hero-tribute.mp4'
 
 export default function Home() {
   return (
@@ -60,11 +60,14 @@ export default function Home() {
 
         <div className={style.projects}>
           <div className={style.project}>
-            <Link href="https://weatherapp.joshkoter.com/" passHref>
-              <a className={style.link}>
-                <h3 id="weather-app">Weather App</h3>
-              </a>
-            </Link>
+            <a
+              href="https://weatherapp.joshkoter.com/"
+              target="_blank"
+              rel="noreferrer"
+              className={style.link}
+            >
+              <h3 id="weather-app">Weather App</h3>
+            </a>
             <p>
               A weather app that uses the Geolocation API. Type a city name and
               hit &apos;Enter&apos; to see it in action, or simply use the
@@ -75,28 +78,33 @@ export default function Home() {
           </div>
 
           <div className={style.project}>
-            <Link
+            <a
               href="https://playground.joshkoter.com/audio-visualiser/"
-              passHref
+              className={style.link}
+              target="_blank"
+              rel="noreferrer"
             >
-              <a className={style.link}>
-                <h3 id="audio-visualiser">Audio Visualiser</h3>
-              </a>
-            </Link>
+              <h3 id="audio-visualiser">Audio Visualiser</h3>
+            </a>
             <p>
               An audio visualiser that responds to microphone input.{' '}
-              <Link
+              <a
                 href="https://playground.joshkoter.com/audio-visualiser/"
-                passHref
+                target="_blank"
+                rel="noreferrer"
               >
-                <a>Click this link</a>
-              </Link>
+                Click this link
+              </a>
               , then allow microphone access and speak into your mic or play
               some music to see it in action. This project was inspired by Frank
               over at{' '}
-              <Link href="https://www.youtube.com/c/Frankslaboratory" passHref>
-                <a>Franks Laboratory</a>
-              </Link>
+              <a
+                href="https://www.youtube.com/c/Frankslaboratory"
+                target="blank"
+                rel="noreferrer"
+              >
+                Franks Laboratory
+              </a>
               .
             </p>
             <ReactPlayer
@@ -115,33 +123,98 @@ export default function Home() {
           </div>
 
           <div className={style.project}>
-            <Link
-              href="https://playground.joshkoter.com/when-pigs-fly/"
-              passHref
+            <a
+              href="https://stick-hero.joshkoter.com/"
+              target="blank"
+              rel="noreferrer"
+              className={style.link}
             >
-              <a className={style.link}>
-                <h3 id="when-pigs-fly">When Pigs Fly Game</h3>
+              <h3 id="stick-hero-tribute">Stick Hero Tribute</h3>
+            </a>
+            <p>
+              My first mobile-friendly game, inspired by the{' '}
+              <a
+                href="https://ketchapp-stick-hero.en.aptoide.com/app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Stick Hero game from KetchApp
               </a>
-            </Link>
+              . Javascript implementation inspired by this{' '}
+              <a
+                href="https://www.freecodecamp.org/news/javascript-game-tutorial-stick-hero-with-html-canvas/#the-stick-hero-game"
+                target="_blank"
+                rel="noreferrer"
+              >
+                tutorial
+              </a>
+              . Credit for character sprites goes to{' '}
+              <a
+                href="https://www.spriters-resource.com/"
+                target="blank"
+                rel="noreferrer"
+              >
+                The Spriters Resource
+              </a>
+              . Credit for the background images goes to{' '}
+              <a
+                href="https://opengameart.org/content/horizontal-2d-backgrounds"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CraftPix.net 2D Game Assets
+              </a>
+              . This soundtrack is from{' '}
+              <a href="https://store.steampowered.com/app/567380/Heartbound/">
+                Heartbound
+              </a>
+              , a game by Pirate Software.
+            </p>
+            <ReactPlayer
+              muted={true}
+              loop={true}
+              className={style.video}
+              url={StickHeroTributeMp4}
+              type="video/mp4"
+              width="100%"
+              height="100%"
+              controls
+              playing
+              light="/stick-hero.webp"
+              playIcon={<BsFillPlayCircleFill className={style.playIcon} />}
+            />
+          </div>
+
+          <div className={style.project}>
+            <a
+              href="https://playground.joshkoter.com/when-pigs-fly/"
+              target="blank"
+              rel="noreferrer"
+              className={style.link}
+            >
+              <h3 id="when-pigs-fly">When Pigs Fly Game</h3>
+            </a>
             <p>
               A game built using the HTML <code>&lt;canvas&gt;</code> element. I
               love pigs so I chose this lovely little hog and added some wings
               to turn it into an animated character. To play;{' '}
-              <Link
+              <a
                 href="https://playground.joshkoter.com/when-pigs-fly/"
-                passHref
+                target="blank"
+                rel="noreferrer"
               >
-                <a>click this link</a>
-              </Link>
+                click this link
+              </a>
               , then shoot the pigs before they disappear off the canvas. Let me
               know what your highscore was! Credit for the background image goes
               to{' '}
-              <Link
+              <a
                 href="https://www.vecteezy.com/free-vector/jungle-background"
-                passHref
+                target="blank"
+                rel="noreferrer"
               >
-                <a>nightwolfdezines</a>
-              </Link>
+                nightwolfdezines
+              </a>
               .
             </p>
             <ReactPlayer
@@ -160,42 +233,49 @@ export default function Home() {
           </div>
 
           <div className={style.project}>
-            <Link
+            <a
               href="https://playground.joshkoter.com/knight-of-cups/"
-              passHref
+              target="blank"
+              rel="noreferrer"
+              className={style.link}
             >
-              <a className={style.link}>
-                <h3 id="knight-of-cups">Knight of Cups Game</h3>
-              </a>
-            </Link>
+              <h3 id="knight-of-cups">Knight of Cups Game</h3>
+            </a>
             <p>
               Another game built with the <code>&lt;canvas&gt;</code> element. I
               used characters from two of my favourite 2D games{' '}
-              <Link
+              <a
                 href="https://store.steampowered.com/app/268910/Cuphead/"
-                passHref
+                target="blank"
+                rel="noreferrer"
               >
-                <a>Cuphead</a>
-              </Link>{' '}
+                Cuphead
+              </a>{' '}
               and{' '}
-              <Link
+              <a
                 href="https://store.steampowered.com/app/367520/Hollow_Knight/"
-                passHref
+                target="blank"
+                rel="noreferrer"
               >
-                <a>Hollow Knight</a>
-              </Link>
+                Hollow Knight
+              </a>
               . To play;{' '}
-              <Link
+              <a
                 href="https://playground.joshkoter.com/knight-of-cups/"
-                passHref
+                target="blank"
+                rel="noreferrer"
               >
-                <a>click this link</a>
-              </Link>
+                click this link
+              </a>
               , then use the arrow keys on your keyboard to control Cuphead and
               avoid touching the jellyfish. Credit for all game assets goes to{' '}
-              <Link href="https://www.spriters-resource.com/" passHref>
-                <a>The Spriters Resource</a>
-              </Link>
+              <a
+                href="https://www.spriters-resource.com/"
+                target="blank"
+                rel="noreferrer"
+              >
+                The Spriters Resource
+              </a>
               .
             </p>
             <ReactPlayer

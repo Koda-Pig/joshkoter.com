@@ -22,6 +22,7 @@ export default function Navbar() {
       { link: '/', text: 'Home' },
       { link: '#weather-app', text: 'Weather App' },
       { link: '#audio-visualiser', text: 'Audio Visualiser' },
+      { link: '#stick-hero-tribute', text: 'Stick Hero' },
       { link: '#when-pigs-fly', text: 'When Pigs Fly' },
       { link: '#knight-of-cups', text: 'Knight of Cups' },
       { link: '#contact', text: 'Contact' },

@@ -6,7 +6,6 @@ export default function Contact() {
   return (
     <div className={style.contactSect}>
       <h2 id="contact">Get in touch</h2>
-      <p>HMU, let&apos;s make something marvellous!</p>
       <div className={style.socialIcons}>
         <Link href="mailto:josh.koter@gmail.com" passHref>
           <a className={style.link}>

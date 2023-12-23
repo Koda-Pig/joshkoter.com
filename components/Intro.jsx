@@ -15,8 +15,9 @@ export default function Intro() {
         in?
       </p>
       <p>
-        Below are a few recent projects I&apos;ve made to show off my skills.
-        They were all built without frameworks and use only vanilla Javascript.
+        Below are a few recent projects I&apos;ve made. They were all built
+        without frameworks or external packages and use only vanilla Javascript,
+        SASS, and HTML.
       </p>
     </div>
   )
