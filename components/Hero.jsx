@@ -24,7 +24,7 @@ export default function Hero() {
               <animateTransform
                 attributeName="transform"
                 begin="0s"
-                dur="1.5s"
+                dur="4s"
                 type="translate"
                 from="0,0"
                 to="40,0"
@@ -54,7 +54,7 @@ export default function Hero() {
           Josh Koter
         </text>
       </svg>
-      <p className={style.subHeading}>Front-End Developer</p>
+      {/* <p className={style.subHeading}>Front-End Developer</p> */}
     </div>
   )
 }
