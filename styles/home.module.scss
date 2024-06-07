@@ -61,10 +61,14 @@
     font-size: 2rem;
     margin-bottom: 1rem;
     /* account for height of nav when scroll to heading */
-    scroll-margin: 2.4rem 0 0 0;
+    scroll-margin-top: 2.4rem;
   }
   p {
     margin-bottom: 2rem;
+
+    + * {
+      margin-top: auto;
+    }
   }
   video {
     border-radius: 16px;

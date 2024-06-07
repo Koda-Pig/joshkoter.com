@@ -20,6 +20,7 @@ export default function Navbar() {
 
   const menuList = [
       { link: '/', text: 'Home' },
+      { link: '#lisa-website', text: 'Lisa Liebermann website' },
       { link: '#weather-app', text: 'Weather App' },
       { link: '#audio-visualiser', text: 'Audio Visualiser' },
       { link: '#stick-hero-tribute', text: 'Stick Hero' },

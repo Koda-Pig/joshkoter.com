@@ -11,6 +11,7 @@ import Contact from '../components/Contact'
 import EasterEgg from '../components/EasterEgg'
 import WeatherApp from '../components/WeatherApp'
 import JoshKoterPic from '../public/JoshKoter.jpg'
+import LisaWebsite from '../components/LisaWebsite'
 import WhenPigsFlyMp4 from '../public/when-pigs-fly.mp4'
 import KnightOfCupsMp4 from '../public/knight-of-cups.mp4'
 import AudioVisualiserMp4 from '../public/audio-visualiser.mp4'
@@ -59,6 +60,30 @@ export default function Home() {
         <Intro />
 
         <div className={style.projects}>
+          <div className={style.project}>
+            <a
+              href="https://lisapottery.co.za/"
+              target="_blank"
+              rel="noreferrer"
+              className={style.link}
+            >
+              <h3 id="lisa-website">Lisa Liebermann&apos;s website</h3>
+            </a>
+            <p>
+              Website for ceramic artist Lisa Liebermann, designed by{' '}
+              <a
+                href="https://aadilachand.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Aadila Chand
+              </a>{' '}
+              on Figma. This Next.js project uses TypeScript and SASS, and is
+              deployed with Netlify.
+            </p>
+
+            <LisaWebsite w="500" h="500" />
+          </div>
           <div className={style.project}>
             <a
               href="https://weatherapp.joshkoter.com/"
