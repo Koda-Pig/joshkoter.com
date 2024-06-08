@@ -8,19 +8,19 @@ export default function Contact() {
       <h2 id="contact">Get in touch</h2>
       <div className={style.socialIcons}>
         <Link href="mailto:josh.koter@gmail.com" passHref>
-          <a className={style.link}>
-            <FaRegEnvelope /> Email
-          </a>
+          {/* <a className={style.link}> */}
+          <FaRegEnvelope /> Email
+          {/* </a> */}
         </Link>
         <Link href="https://www.linkedin.com/in/josh-koter/" passHref>
-          <a className={style.link}>
-            <FaLinkedin /> LinkedIn
-          </a>
+          {/* <a className={style.link}> */}
+          <FaLinkedin /> LinkedIn
+          {/* </a> */}
         </Link>
         <Link href="https://github.com/Koda-Pig/" passHref>
-          <a className={style.link}>
-            <FaGithubSquare /> GitHub
-          </a>
+          {/* <a className={style.link}> */}
+          <FaGithubSquare /> GitHub
+          {/* </a> */}
         </Link>
       </div>
     </div>

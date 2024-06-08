@@ -1,3 +1,5 @@
+'use client'
+
 import style from '../styles/form.module.scss'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import { useState } from 'react'

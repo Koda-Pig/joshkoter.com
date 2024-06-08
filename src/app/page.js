@@ -1,3 +1,5 @@
+'use client'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import ReactPlayer from 'react-player/lazy'
@@ -10,12 +12,8 @@ import Quote from '../components/Quote'
 import Contact from '../components/Contact'
 import EasterEgg from '../components/EasterEgg'
 import WeatherApp from '../components/WeatherApp'
-import JoshKoterPic from '../public/JoshKoter.jpg'
 import LisaWebsite from '../components/LisaWebsite'
-import WhenPigsFlyMp4 from '../public/when-pigs-fly.mp4'
-import KnightOfCupsMp4 from '../public/knight-of-cups.mp4'
-import AudioVisualiserMp4 from '../public/audio-visualiser.mp4'
-import StickHeroTributeMp4 from '../public/stick-hero-tribute.mp4'
+import JoshKoterPic from '../../public/JoshKoter.jpg'
 
 export default function Home() {
   return (
@@ -40,7 +38,7 @@ export default function Home() {
         />
       </Head>
 
-      <EasterEgg />
+      {/* <EasterEgg /> */}
 
       <main className={style.homePage} id="main-content" tabIndex="0">
         <Hero id="home" />
@@ -84,6 +82,7 @@ export default function Home() {
 
             <LisaWebsite w="500" h="500" />
           </div>
+
           <div className={style.project}>
             <a
               href="https://weatherapp.joshkoter.com/"
@@ -136,7 +135,7 @@ export default function Home() {
               muted={true}
               loop={true}
               className={style.video}
-              url={AudioVisualiserMp4}
+              url="/audio-visualiser.mp4"
               type="video/mp4"
               width="100%"
               height="100%"
@@ -199,7 +198,7 @@ export default function Home() {
               muted={true}
               loop={true}
               className={style.video}
-              url={StickHeroTributeMp4}
+              url="/stick-hero-tribute.mp4"
               type="video/mp4"
               width="100%"
               height="100%"
@@ -246,7 +245,7 @@ export default function Home() {
               muted={true}
               loop={true}
               className={style.video}
-              url={WhenPigsFlyMp4}
+              url="/when-pigs-fly.mp4"
               type="video/mp4"
               width="100%"
               height="100%"
@@ -307,7 +306,7 @@ export default function Home() {
               muted={true}
               loop={true}
               className={style.video}
-              url={KnightOfCupsMp4}
+              url="/knight-of-cups.mp4"
               type="video/mp4"
               width="100%"
               height="100%"

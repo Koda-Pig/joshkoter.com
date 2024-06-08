@@ -1,6 +1,7 @@
+'use client'
+
 import style from '../styles/easterEgg.module.scss'
 import { useEffect } from 'react'
-import Link from 'next/link'
 
 export default function EasterEgg() {
   useEffect(() => {
@@ -10,8 +11,8 @@ export default function EasterEgg() {
   }, [])
 
   return (
-    <Link href="https://youtu.be/dQw4w9WgXcQ" passHref>
+    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" title="easter egg">
       <div id="easteregg" className={style.pig}></div>
-    </Link>
+    </a>
   )
 }

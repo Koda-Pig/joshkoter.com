@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import style from '../styles/navbar.module.scss'
 import { useEffect, useState } from 'react'
@@ -31,9 +33,9 @@ export default function Navbar() {
     menuItems = menuList.map((item, index) => {
       return (
         <Link key={index} href={item.link} passHref>
-          <a className={style.link} onClick={toggleHamburger}>
-            {item.text}
-          </a>
+          {/* <a className={style.link} onClick={toggleHamburger}> */}
+          {item.text}
+          {/* </a> */}
         </Link>
       )
     })
