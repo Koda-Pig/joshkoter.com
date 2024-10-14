@@ -38,9 +38,7 @@
 }
 
 .profilePic {
-  border-radius: 100%;
-  filter: grayscale(100%);
-  transition: filter 0.15s ease-in;
+  border-radius: 50%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
