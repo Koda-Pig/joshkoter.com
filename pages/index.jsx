@@ -4,7 +4,6 @@ import ReactPlayer from 'react-player/lazy'
 import { BsFillPlayCircleFill } from 'react-icons/bs'
 import style from '../styles/home.module.scss'
 import Hero from '../components/Hero'
-import Form from '../components/Form'
 import Intro from '../components/Intro'
 import Quote from '../components/Quote'
 import Contact from '../components/Contact'
@@ -321,7 +320,6 @@ export default function Home() {
 
         <div className={style.contact}>
           <Contact />
-          <Form />
         </div>
       </main>
     </>
