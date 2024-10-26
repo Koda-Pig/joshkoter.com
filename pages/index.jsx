@@ -44,18 +44,6 @@ export default function Home() {
       <main className={style.homePage} id="main-content" tabIndex="0">
         <Hero id="home" />
 
-        <div className={style.blurb}>
-          <Image
-            src={JoshKoterPic}
-            alt="Headshot of Josh Koter"
-            className={style.profilePic}
-            width={225}
-            height={225}
-            priority
-          />
-          <Quote />
-        </div>
-
         <Intro />
 
         <div className={style.projects}>
@@ -316,6 +304,18 @@ export default function Home() {
               playIcon={<BsFillPlayCircleFill className={style.playIcon} />}
             />
           </div>
+        </div>
+
+        <div className={style.blurb}>
+          <Image
+            src={JoshKoterPic}
+            alt="Headshot of Josh Koter"
+            className={style.profilePic}
+            width={225}
+            height={225}
+            priority
+          />
+          <Quote />
         </div>
 
         <div className={style.contact}>

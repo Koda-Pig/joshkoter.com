@@ -1,9 +1,14 @@
 $menu-items: 7;
 
+%blur {
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+}
+
 .nav {
-  top: 0;
+  @extend %blur;
+  inset: 0 0 auto 0;
   z-index: 2;
-  width: 100%;
   height: 80px;
   display: flex;
   position: fixed;
@@ -11,14 +16,25 @@ $menu-items: 7;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0);
   transition: background-color 0.35s, transform 0.35s, top 0.35s;
-}
 
-.showBg {
-  top: -61px;
-  background-color: rgba(35, 41, 50, 0.9);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  &:hover {
-    top: 0;
+  @media (max-width: 969px) {
+    right: 0;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    flex-direction: column;
+    padding: 3rem 0 1rem 0;
+    transform: translateX(100vw);
+    transition: transform 0.25s ease-out;
+
+    .link {
+      margin-bottom: 1rem;
+    }
+
+    &.open {
+      transform: translateX(0);
+    }
   }
 }
 
@@ -34,7 +50,7 @@ $menu-items: 7;
 
   &:hover,
   &:focus-visible {
-    transform: scale(1.1);
+    // transform: scale(1.1);
   }
 }
 
@@ -95,40 +111,60 @@ $menu-items: 7;
       stroke-dasharray: 60 105 60 300;
     }
   }
-}
 
-@media (max-width: 969px) {
-  .nav {
-    right: 0;
-    gap: 2rem;
-    width: 100%;
-    height: 100%;
-    font-size: 1.2rem;
-    flex-direction: column;
-    padding: 3rem 0 1rem 0;
-    transition: transform 0.25s ease-out;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    background-color: rgba(35, 41, 50, 0.98);
-
-    .link {
-      margin-bottom: 1.5rem;
-    }
-
-    &.closed {
-      flex-direction: column;
-      transform: translateX(100vw);
-    }
-
-    &.open {
-      transform: translateX(0);
-    }
-  }
-
-  .hamburger {
+  @media (max-width: 969px) {
     display: flex;
   }
+}
 
-  .showBg {
-    top: 0;
+.dropdown {
+  position: relative;
+  text-align: center;
+  label {
+    color: var(--lightest);
+    cursor: pointer;
+  }
+  input {
+    appearance: none;
+    width: 0;
+    height: 0;
+
+    &:checked {
+      ~ .dropdownContent {
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+  &Content {
+    display: grid;
+    position: absolute;
+    left: 50%;
+    translate: -50% 1rem;
+    grid-template-rows: 0fr;
+    @extend %blur;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: grid-template-rows 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &Inner {
+      overflow: clip;
+      min-height: 0;
+      max-width: 100%;
+      width: max-content;
+      padding: 0 1rem;
+
+      a {
+        display: block;
+        margin-block: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 969px) {
+    .dropdownContent {
+      background-color: unset;
+      left: unset;
+      translate: unset;
+      position: unset;
+    }
   }
 }

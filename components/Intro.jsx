@@ -31,14 +31,17 @@ export default function Intro() {
   return (
     <div className={style.intro}>
       <p>
-        Hi! I&apos;ve been passionate about web development since 2016,
-        transitioning from simply browsing the web to exploring how it works.{' '}
-        {yearsToString(webYears)} years later, I appreciate that there&apos;s
-        always more to learn, which is what keeps me hooked. The web is
-        constantly evolving and improving, making it an exciting field for
-        someone who loves to learn new things.
+        Hi! My journey in web development began in 2016, when I transitioned
+        from browsing the web to discovering how it works behind the scenes.{' '}
+        {yearsToString(webYears)} years later, I&apos;m still captivated by the
+        field&apos;s ever-evolving nature, and I love that there&apos;s always
+        something new to learn.
       </p>
-      <p>Below are a few recent projects I&apos;ve made.</p>
+      <p>
+        I specialize in frontend development, with a focus on CSS, HTML,
+        JavaScript, TypeScript, SCSS, Node.js, Next.js, and React.
+      </p>
+      <p>Below are a few projects I&apos;ve built.</p>
     </div>
   )
 }
