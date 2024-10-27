@@ -54,7 +54,8 @@ export default function Hero() {
           Josh Koter
         </text>
       </svg>
-      {/* <p className={style.subHeading}>Front-End Developer</p> */}
+      {/* — */}
+      <p className={style.subHeading}>software engineer - frontend developer</p>
     </div>
   )
 }

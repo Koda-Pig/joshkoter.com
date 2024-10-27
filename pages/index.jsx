@@ -5,6 +5,7 @@ import { BsFillPlayCircleFill } from 'react-icons/bs'
 import style from '../styles/home.module.scss'
 import Hero from '../components/Hero'
 import Intro from '../components/Intro'
+import About from '../components/About'
 import Quote from '../components/Quote'
 import Contact from '../components/Contact'
 import EasterEgg from '../components/EasterEgg'
@@ -22,7 +23,7 @@ export default function Home() {
       <Head>
         <meta name="description" content="Personal website and portfolio." />
         <meta name="theme-color" content="#2196f3" />
-        <title>Josh Koter | Front-End Developer</title>
+        <title>Josh Koter | Frontend Developer</title>
         <link rel="icon" href="favicon.ico" />
         <link rel="manifest" href="manifest.json" />
         <link rel="apple-touch-icon" href="icon-192x192.png" />
@@ -306,15 +307,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={style.blurb}>
-          <Image
-            src={JoshKoterPic}
-            alt="Headshot of Josh Koter"
-            className={style.profilePic}
-            width={225}
-            height={225}
-            priority
-          />
+        <div>
+          <div className={style.blurb}>
+            <Image
+              src={JoshKoterPic}
+              alt="Headshot of Josh Koter"
+              className={style.profilePic}
+              width={225}
+              height={225}
+              priority
+            />
+            <About />
+          </div>
           <Quote />
         </div>
 
