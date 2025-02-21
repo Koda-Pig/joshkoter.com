@@ -23,7 +23,7 @@ export default function Home() {
       <Head>
         <meta name="description" content="Personal website and portfolio." />
         <meta name="theme-color" content="#2196f3" />
-        <title>Josh Koter | Frontend Developer</title>
+        <title>Josh Koter | Frontend Engineer</title>
         <link rel="icon" href="favicon.ico" />
         <link rel="manifest" href="manifest.json" />
         <link rel="apple-touch-icon" href="icon-192x192.png" />

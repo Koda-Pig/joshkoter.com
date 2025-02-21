@@ -14,4 +14,4 @@ Open [http://localhost:666](http://localhost:666) with your browser to see the r
 
 ## Todo
 
-4. add 'frontend developer' top left
+4. add 'frontend engineer' top left
